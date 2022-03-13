@@ -1,0 +1,230 @@
+/* Main View CSS Start */
+body{
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+#header{
+
+    box-shadow: 0px 1px 5px grey;
+
+}
+main{
+    margin-top:6rem;
+}
+#navBar{
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    box-shadow: 0px 1px 5px grey;
+    padding: 0px 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 10;
+}
+#leftNav{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#rightNav{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ClothingCards{
+    display: grid;
+    grid-template-columns: 19% 19% 19% 19% 19%;
+    grid-column-gap: 1.25%;
+}
+#AccessoriesCards{
+    display: grid;
+    grid-template-columns: 19% 19% 19% 19% 19%;
+    grid-column-gap: 1.25%;
+}
+.card img{
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+#main-container{
+    padding: 0px 8rem;
+}
+.card{
+    box-shadow: 1px 1px 5px #cfbdbd;
+    border-radius: 5px;
+}
+/* Main View CSS End */
+
+
+/* Detail View CSS Start */
+#main-detail-container{
+    display: grid;
+    /* flex-wrap: wrap; */
+    grid-template-columns: 30% 50%;
+    justify-content: center;
+    height: 100%;
+    padding: 0px 8rem;
+    font-family: "Montserrat", sans-serif;
+}
+#main-image-section{
+    width: 100%;
+    /* border: 1px solid red; */
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+}
+#product-detail-wrapper{
+    width: 100%;
+    /* border: 1px solid red; */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.previewImage{
+    display: flex;
+    justify-content: left;
+    height: 130px;
+}
+.thumbail{
+    height: 100%;
+    margin-right: 20px;
+    border-radius: 6px;
+    padding: 3px;
+}
+#name{
+    font-weight: 300;
+font-size: 44px;
+letter-spacing: -2px;
+margin-top: 0px;
+}
+#brand{
+    margin-top: 20px;
+font-weight: 200;
+font-size: 20px;
+letter-spacing: 1px;
+color: rgb(27, 25, 25);
+}
+#price{
+    color: #009688;
+font-weight: bold;
+}
+#description{
+    margin-top: 20px;
+font-size: 16px;
+font-weight: 300;
+color: #86939e;
+}
+
+#product-detail-wrapper h3{
+    margin-top: 20px;
+font-weight: 200;
+font-size: 20px;
+letter-spacing: 1px;
+color: rgb(27, 25, 25);
+}
+#main-image{
+    /* height:100%; */
+    width:100%;
+}
+.active{
+    border: 2px solid #009688;
+}
+
+@media (max-width:500px) {
+    #main-container{
+        grid-template-columns: 100%;
+        justify-content: left;
+    }
+    .previewImage{
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+    }
+}
+@media(min-width:500px) and (max-width:850px){
+    #main-container{
+        grid-template-columns: 50% 50%;
+    }
+    .previewImage{
+        width: 100%;
+       white-space: nowrap;
+       overflow-x: auto;
+       overflow-y: hidden;
+       scroll-behavior: smooth;
+   }
+}
+/* Detail View CSS End */
+
+/* Add To Cart CSS Start */
+#main-addToCart-container{
+    padding: 0px 8rem;
+}
+#addToCartDiv{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 3.90%;
+}
+#addToCardItem{
+    box-shadow: 1px 1px 5px #b1a5a5;
+    display: flex;
+    justify-content: start;
+    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 0.7rem;
+    border-radius: 5px;
+}
+#totalAmount{
+    box-shadow: 1px 1px 5px #b1a5a5;
+    max-height: 132px;
+    padding: 2rem;
+    border-radius: 5px;
+}
+.checkoutItemImg{
+    border-radius: 6px;
+    padding: 0px 1rem;
+    width: 100px;
+}
+
+#profile-pic{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: antiquewhite;
+}
+#profile-pic span{
+    margin-top: 11px;
+    display: inline-block;
+}
+/* Add To Cart CSS End */
+
+/* Order CSS Start */
+#main-order-container{
+    padding: 0px 8rem;
+    /* height: 100vh; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.orderSuccessMsg{
+    letter-spacing:2px;
+}
+small{
+    letter-spacing: 0.3px;
+}
+.successIcon{
+    text-align: center;
+    color: green;
+}
+/* Order CSS End */
