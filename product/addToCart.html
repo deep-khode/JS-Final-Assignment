@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment JS - Final</title>
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <nav id="navBar">
+            <div id="leftNav">
+                <a href="/index.html"><span>SHOP</span>LANE</a>
+                <a href="/index.html#Clothing"><span>Clothing</span></a>
+                <a href="/index.html#Accessories"><span>accessories</span></a>
+            </div>
+            <div class="search">
+                <input type="search" placeholder="Search for Clothing and accessories..." id="search">
+            </div>
+            <div id="rightNav">
+                <a href="/product/addToCart.html">
+                    <span id="addCart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <span id="addCartCount"></span>
+                </a>
+                <span id="profile-pic"><span>DK</span></span>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div id="main-addToCart-container">
+            <h1>Checkout</h1>
+            <h2>Total Items:<span id="totalItemCount"></span></h2>
+            <div id="addToCartDiv">
+                <div id="addToCartItems">
+                    
+                </div>
+                <div id="totalAmount">
+                    <h2>Total Amount:</h2>
+                    <h4>Amount: Rs <span id="addToCartTotalAmount"></span></h4>
+                    <a href="/product/order.html"><button type="button" id="placeOrder">Place Order</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+    <script type="text/javascript" src="./addToCart.js"></script>
+</body>
+
+</html>
