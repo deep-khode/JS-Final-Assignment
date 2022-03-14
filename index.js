@@ -13,7 +13,7 @@ $(function() {
                     if(res[i].isAccessory){
                         accessoriesHTML += `<div class="card">
                             <a href="/product/detailView.html?id=${res[i].id}">
-                            <img src="${res[i].preview}" alt="">
+                            <img src="${res[i].preview}" alt="${res[i].name}">
                             </a>
                             <div id="productDetails">
                                 <h4>${res[i].name}</h3>
@@ -24,12 +24,12 @@ $(function() {
                     }else{
                         clothsHTML += `<div class="card">
                             <a href="/product/detailView.html?id=${res[i].id}">
-                            <img src="${res[i].preview}" alt="">
+                            <img src="${res[i].preview}" alt="${res[i].name}">
                             </a>
                             <div id="productDetails">
                                 <h4>${res[i].name}</h3>
                                 <h5>${res[i].brand}</h5>
-                                <p>${res[i].price}</p>
+                                <p>Rs ${res[i].price}</p>
                             </div>
                         </div>`;
                     }
@@ -47,7 +47,7 @@ $(function() {
 
     // Add to cart count
     function addToCardCount(){
-        total = 0;
+        let total = 0;
         let addToCartItemCount = localStorage.getItem('addToCart')?JSON.parse(localStorage.getItem('addToCart')):[];
         for (let i = 0; i < addToCartItemCount.length;i++){
             total += addToCartItemCount[i].total;
