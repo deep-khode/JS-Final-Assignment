@@ -1,5 +1,13 @@
 $(function() {
-
+    let counter = 1;
+    setInterval(function () {
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 3000);
+      
     $.ajax({
         url: 'https://5d76bf96515d1a0014085cf9.mockapi.io/product',
         type: 'GET',
@@ -18,7 +26,7 @@ $(function() {
                             <div id="productDetails">
                                 <h4>${res[i].name}</h3>
                                 <h5>${res[i].brand}</h5>
-                                <p>${res[i].price}</p>
+                                <p>Rs ${res[i].price}</p>
                             </div>
                         </div>`;
                     }else{

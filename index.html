@@ -20,10 +20,7 @@
                 <a href="/index.html#Clothing" class="aTag">Clothing</a>
                 <a href="/index.html#Accessories" class="aTag">accessories</a>
             </div>
-            <div class="search">
-                <i class="fas fa-search" aria-hidden="true"></i>
-                <input type="search" placeholder="Search for Clothing and accessories..." id="search">
-            </div>
+            
             <div id="rightNav">
                 <a href="/product/addToCart.html">
                     <span id="addCart">
@@ -37,10 +34,50 @@
     </header>
     <main id="main">
         <div id="main-container">
+            <div class="slider">
+                <div class="slides">
+                    <!--radio buttons start-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!--radio buttons end-->
+                    <!--slide images start-->
+                    <div class="slide first">
+                        <img src="https://shoplane.netlify.app/img/img1.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://shoplane.netlify.app/img/img2.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://shoplane.netlify.app/img/img3.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://shoplane.netlify.app/img/img4.png" alt="">
+                    </div>
+                    <!--slide images end-->
+                    <!--automatic navigation start-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                    <!--automatic navigation end-->
+                </div>
+                <!--manual navigation start-->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+                <!--manual navigation end-->
+            </div>
             <div id="Clothing">
                 <h2>Clothing for Men and Women</h2>
                 <div id="ClothingCards">
-                    
+
                 </div>
             </div>
             <div id="Accessories">
@@ -50,7 +87,37 @@
             </div>
         </div>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <div>
+            <h4>ONLINE STORE</h4>
+            <p>MEN CLOTHING</p>
+            <p>WOMEN CLOTHING</p>
+            <p>MEN ACCESSORIES</p>
+            <p>WOMEN ACCESSORIES</p>
+        </div>
+        <div>
+            <h4>HELPFUL LINKS</h4>
+            <p>HOME</p>
+            <p>ABOUT</p>
+            <p>CONTACT</p>
+
+        </div>
+        <div>
+            <h4>PATNERS</h4>
+            <p>ZARA</p>
+            <p>PANTALOONS</p>
+            <p>LEVIS</p>
+            <p>UCB</p>
+            <p>+ MANY MARE</p>
+        </div>
+        <div>
+            <h4>ADDRESS</h4>
+            <p>BUILDING 101</p>
+            <p>CENTRAL AVENUE</p>
+            <p>LA - 902722</p>
+            <p>UNITED STATES</p>
+        </div>
+    </footer>
     <script type="text/javascript" src="./index.js"></script>
 </body>
 

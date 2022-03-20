@@ -2,6 +2,10 @@
 body{
     margin: 0px;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
 }
 #header{
 
@@ -91,24 +95,40 @@ a{
     padding: 0rem 1rem;
 }
 #productDetails h4{
-    font-weight: 600;
+    /* font-weight: 600;
     margin: 0px;
+    font-size: 16px; */
     font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: rgb(27, 25, 25);
+    margin-top: 10px;
+    margin-bottom: 0;       
 }
 #productDetails h5{
-    margin: 12px 0px;
+    /* margin: 12px 0px; */
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(110, 110, 110);
+    margin-top: 10px;
+    margin-bottom: 0;   
 }
 #productDetails p{
-    margin: 12px 0px;
-    color: #009688;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgb(0, 150, 136);
+    margin-top: 10px;
 }
 #Accessories{
     margin-top: 4rem;
 }
 #Clothing{
     margin-top: 8rem;
+}
+#addToCart{
+    margin-top: 20px;
+    border-radius: none;
 }
 /* Main View CSS End */
 
@@ -250,6 +270,7 @@ color: rgb(27, 25, 25);
     text-align: center;
     border-radius: 20px;
     background-color: antiquewhite;
+    margin-left: 20px;
 }
 #profile-pic span{
     margin-top: 11px;
@@ -276,3 +297,171 @@ small{
     color: green;
 }
 /* Order CSS End */
+
+/* image slider start here */
+
+
+.slider{
+    margin-top: 50px !important;
+    padding-top: 20px;
+    z-index: -1;
+    width: 100%;
+    /* height: 500px; */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 500%;
+    /* height: 500px; */
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 0.5s;
+  }
+  
+  .slide img{
+    width: 100%;
+    /* height: 500px; */
+  }
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manual{
+    position: absolute;
+    width: 100%;
+    margin-top: 0.8vw;
+    display: flex;
+    justify-content: center;
+    display: none;
+  }
+  
+  .manual-btn{
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.1;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: gray;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 23vw;
+    left: 20px;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: gray;
+    color: blue;
+    
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: gray;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: gray;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: gray;
+  }
+    .slides input{
+        height: 20px;
+        width: 20px;
+    } 
+    .navigation-auto div{
+        height: -2px;
+    }
+
+
+
+/* image slider end here */
+
+/* FOOTER STARTS HERE */
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: black;
+    padding-bottom: 20px;
+    padding: 30px;
+    margin-top: 3rem    ;
+}
+footer p{
+    font-size: 12px;
+    color: #b8b8b8;
+    margin: 5px 0;
+}
+footer h4{
+    color: #dcdcdc;
+   
+    margin-bottom: 10px;
+}
+
+/* style for product page */
+button{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    background-color: #009688;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+    font-family: "Montserrat", sans-serif;
+}
